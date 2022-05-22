@@ -259,6 +259,7 @@ h1{
     .card{
         width: 80vw;
         position: relative;
+        height: auto;
     }
 }
 .ico{
