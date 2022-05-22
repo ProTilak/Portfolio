@@ -103,17 +103,17 @@
                 each_ele = aniEle[ek];
                 elePos = each_ele.getBoundingClientRect();
                 if(screen.height-elePos.height>elePos.top+elePos.height && elePos.top+elePos.height>0){
-                    console.log("Raise");
+                    // console.log("Raise");
                     each_ele.classList.remove('direct');
                     each_ele.classList.add('fadeOut');
                 }
                 else{
-                    console.log('hide1');
+                    // console.log('hide1');
                     each_ele.classList.remove('fadeOut');
                     // each_ele.classList.add('direct');
                 }
                 if(elePos.top+elePos.height<0){
-                    console.log('hide');
+                    // console.log('hide');
                     each_ele.classList.remove('fadeOut');
                     // each_ele.classList.add('direct')
                 }
