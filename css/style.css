@@ -322,6 +322,7 @@ h1{
 @media only screen and (max-width: 796px){
     .plate{
         width: 100%;
+        height: auto;
     }
 }
 .dis>h3{
