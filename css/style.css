@@ -1,0 +1,379 @@
+body{
+    margin: 0px;
+    background: rgb(18, 22, 22);
+    overflow-x: hidden;
+}
+.head{
+    height: 110vh;
+    width: 100vw;
+    position: absolute;
+    top: -100px;
+    background: #269dce;
+    transform: skewY(5deg);
+}
+.inbox{
+    position: relative;
+    transform: skewY(-5deg);
+    background: transparent;
+    top: 100px;
+    height: 80vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+.helle{
+    border-radius: 0px 600px 600px 0px;
+    background: rgba(0, 0, 0, 0.845);
+    height: 850px;
+    width: 1000px;
+    left: -240px;
+    margin: 0px;
+    position: relative;
+    display: inline-flex;
+    transform: rotate(50deg);
+    top: -250px;
+}
+.back{
+    display: flex;
+    flex-direction: column;
+    top: 170px;
+    position: relative;
+    transform: rotate(-5deg);
+}
+.thelle{
+    height:170px;
+    background: #14252bd5;
+    margin: 10px;
+    width: 700px;
+    /* display: inline-block; */
+    border-radius: 0px 600px 600px 0px;
+
+}
+.textbox{
+    color: white;
+    top: 100px;
+    /* transform: rotate(-50deg); */
+    height: 500px;
+    position: relative;
+    /* left: -149px; */
+    /* border: 1px solid; */
+    padding: 10px;
+}
+.overlap{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* position: absolute; */
+    top: 10px;
+    width: 100vw;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.yhead{
+    color: yellow;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+.name{
+    color: white;
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+.animator{
+    font-size: 30px;
+    overflow-y: hidden;
+    width: 400px;
+    height: 30px;
+    /* border: 1px solid; */
+}
+@keyframes change {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: -60px;
+    }
+}
+#dynamic{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    /* animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative; */
+}
+#dynamic>span{
+    height: 30px;
+}
+.container{
+    /* height: 200px;
+    width: 200px; */
+    border: 6px solid white;
+    border-radius: 20px 0px 20px 0px;
+    width: 380px;
+    left: -50px;
+    top: 20px;
+    position: relative;
+}
+.whoami{
+    color: white;
+    /* border: 1px solid; */
+    /* text-align: center; */
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+    color: yellow;
+}
+.meToo{
+    opacity: 0;
+}
+.fadeOut, .direct{
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.direct{
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.content_box{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.imgs, .content{
+    width: 50vw;
+}
+.imgs{
+    text-align: right;
+    padding-right: 100px;
+}
+.imgs>img{
+    border-radius: 100px 0px 100px 0px;
+    box-shadow: 20px 20px rgba(128, 128, 128, 0.473);
+}
+.content{
+    margin: 10px;
+    color: white;
+}
+.content>h2{
+    font-size: 60px;
+    margin-top: 10px;
+}
+.dash{
+    height: 5px;
+    background: yellow;
+    display: inline-block;
+    width: 50px;
+}
+.text{
+    /* border: 1px solid; */
+    display: inline-block;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.resume{
+    font-size: 20px;
+    padding: 10px;
+    color: yellow;
+    border-radius: 30px;
+    border: 2px solid;
+    background: transparent;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    transition: background 2s;
+    /* transition: color 2s; */
+}
+.resume:hover{
+    cursor: pointer;
+    background: yellow;
+    color: black;
+}
+.ach{
+    margin-top: 60px;
+    padding: 100px;
+    background: black;
+}
+.ach>h1{
+    margin-top: 0px;
+}
+.achCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 500px;
+    height: 220px;
+    background: #2e2f3d;
+    margin: 10px;
+    border-radius: 20px;
+    color: blue;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.ico{
+    display: flex;
+    height: 120px;
+    /* border: 1px solid; */
+}
+.content{
+    /* font-size: 20px; */
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid; */
+}
+.card>.content{
+    width: auto;
+    height: auto;
+}
+.content>h3{
+    font-size: 30px;
+}
+.content>p{
+    color: rgba(255, 255, 255, 0.705);
+}
+.work, .tools, .xp{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(to bottom, rgb(23 38 43), rgba(23, 38, 43, 0.842));
+}
+.work>h2, .tools>h2, .xp>h2{
+    font-size: 60px;
+    margin: 10px;
+}
+.work>h3{
+    font-size: 40px;
+    margin: 0px;
+}
+.allCards{
+    margin:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.plate{
+    /* border: 1px solid; */
+    width: 300px;
+    border-radius: 20px;
+    background: #2e2f3d;
+    padding: 10px;
+    padding-top: 50px;
+    height: 460px;
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 18px;
+    margin: 15px;
+}
+.plate>img{
+    width: 150px;
+}
+@media only screen and (max-width: 796px){
+    .plate{
+        width: 100%;
+    }
+}
+.dis>h3{
+    font-size: 30px;
+    color: white;
+}
+.see{
+    color: white;
+    background: transparent;
+    /* border: 1px solid white; */
+    border: 0px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 60px;
+    font-size: 15px;
+    margin: 40px;
+}
+
+.skillCard{
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* width: 100vw; */
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.skill{
+    /* border: 1px solid; */
+    width: 250px;
+    height: 250px;
+    border-radius: 50px 0px 50px 0px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(19 31 34);
+    box-shadow: 20px 20px rgb(35 48 50);
+    margin: 25px;
+}
+.skill>h3{
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 0px;
+}
+.post, .duration{
+    color: yellow;
+    font-size: 30px;
+}
+.site, .time{
+    color: white;
+    font-size: 20px;
+}
+.place{
+    color: rgba(255, 255, 255, 0.685);
+}
+.tails, .date{
+    text-align: left;
+    width: 30%;
+    /* border: 1px solid; */
+}
+.xpCard{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.comp{
+    margin: 20px;
+    /* border: 1px solid; */
+    width: 70vw;
+    border-radius: 15px 0px 15px 0px;
+    background: #131f22;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    box-shadow: 20px 20px #233032;
+}
+footer{
+    display: flex;
+    color:white;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}

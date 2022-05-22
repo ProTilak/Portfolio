@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilak Agrawak</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="head">
+        <div class="inbox">
+            <div class="lele">
+                <div class="helle">
+                    <div class="back">
+                        <div class="thelle"></div>
+                        <div class="thelle" style="width: 550px; background: #16333de1;"></div>
+                        <div class="thelle"></div>
+                    </div>
+                    <!-- <div class="textbox">
+                        <div class="yhead">Hello I'm</div>
+                        <div class="name">
+                            <b>Tilak <br> Agrawal </b>
+                        </div>
+                        <div class="animator">
+                            <span id="static">I Am a</span>
+                            <span id="dynamic">
+                                <span class="dcontent"></span>
+                                <span class="dcontent">Maker</span><span class="dcontent">FS DeveloPer</span><span class="dcontent">Coder</span><span class="dcontent">Animator</span><span class="dcontent">2D Game develoPer</span>
+                            </span>
+                            <script>
+                                var dyna = document.getElementById('dynamic');
+                                var every_line = document.getElementsByClassName('dcontent');
+                                var line_len = every_line.length;
+                                var dynac = 0;
+                                var c = 1;
+                                var heightRequired = 30;
+                                var f = 1;
+                                function changeLine(){
+                                    if(f%c==0){
+                                        if(dynac < heightRequired){
+                                            dyna.style.top = (dynac)*-1 + 'px';
+                                            dynac++;
+                                            c = 1;
+                                        }
+                                        else{
+                                            c = 150;
+                                            if(line_len*30 == heightRequired){
+                                                dyna.style.top = '30px';
+                                                heightRequired = 0;
+                                                dynac = 0;
+                                                f=1;
+                                                c = 1;
+                                            }
+                                            heightRequired += 30;
+                                        }
+                                    }
+                                    f++;
+                                    window.requestAnimationFrame(changeLine);
+                                }
+                                window.requestAnimationFrame(changeLine);
+                            </script>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <div class="rele">
+                <img class="container" src="../imgs/imgs/me.jpg" alt="OOPS">
+            </div> -->
+        </div>
+    </div>
+    <div class="overlap">
+        <div class="textbox">
+            <div class="yhead">Hello I'm</div>
+            <div class="name">
+                <b>Tilak <br> Agrawal </b>
+            </div>
+            <div class="animator">
+                <span id="static">I Am a</span>
+                <span id="dynamic">
+                    <span class="dcontent"></span>
+                    <span class="dcontent">Maker</span><span class="dcontent">FS DeveloPer</span><span class="dcontent">Coder</span><span class="dcontent">Animator</span><span class="dcontent">2D Game develoPer</span>
+                </span>
+                <script>
+                    var dyna = document.getElementById('dynamic');
+                    var every_line = document.getElementsByClassName('dcontent');
+                    var line_len = every_line.length;
+                    var dynac = 0;
+                    var c = 1;
+                    var heightRequired = 30;
+                    var f = 1;
+                    function changeLine(){
+                        if(f%c==0){
+                            if(dynac < heightRequired){
+                                dyna.style.top = (dynac)*-1 + 'px';
+                                dynac++;
+                                c = 1;
+                            }
+                            else{
+                                c = 150;
+                                if(line_len*30 == heightRequired){
+                                    dyna.style.top = '30px';
+                                    heightRequired = 0;
+                                    dynac = 0;
+                                    f=1;
+                                    c = 1;
+                                }
+                                heightRequired += 30;
+                            }
+                        }
+                        f++;
+                        window.requestAnimationFrame(changeLine);
+                    }
+                    window.requestAnimationFrame(changeLine);
+                </script>
+            </div>
+        </div>
+        <div class="rele">
+            <img class="container" src="../imgs/imgs/me.jpg" alt="OOPS">
+        </div>
+    </div>
+    <div class="whoami">
+        <h1 class="meToo">Who am I?</h1>
+    </div>
+    <div class="content_box">
+        <div class="imgs">
+            <img src="../imgs/imgs/whoami.jpg" alt="" style="width:500px;">
+        </div>
+        <div class="content">
+            <div class="dash"></div>
+            <h2>About Me</h2>
+            <div class="text">
+                Hello! My name is Tilak <br>
+                I'm from Jaipur, Rajasthan <br>
+                I'm pursuing BCA with AI/ML from <br>
+                Jaipur Engineering Collage and Research Center - 1 <sup>st</sup> year <br>
+                --------------------------------------- <br>
+                A Robotics and Programming Enthusiast. <br>
+                I'm Currently studying G-code and Artificial Intelligence. <br>
+                Digital marketing and 3d Animation are my Second Hobbies. <br>
+                Wanna Know More? <br>
+            </div>
+            <button class="resume">Download Resume</button>
+        </div>
+    </div>
+    <script>
+        function animateOnBoard(){
+            var aniEle = document.getElementsByClassName('meToo');
+            for(ek=0;ek<aniEle.length;ek++){
+                each_ele = aniEle[ek];
+                elePos = each_ele.getBoundingClientRect();
+                if(screen.height-elePos.height>elePos.top+elePos.height && elePos.top+elePos.height>0){
+                    console.log("Raise");
+                    each_ele.classList.remove('direct');
+                    each_ele.classList.add('fadeOut');
+                }
+                else{
+                    console.log('hide1');
+                    each_ele.classList.remove('fadeOut');
+                    // each_ele.classList.add('direct');
+                }
+                if(elePos.top+elePos.height<0){
+                    console.log('hide');
+                    each_ele.classList.remove('fadeOut');
+                    // each_ele.classList.add('direct')
+                }
+            }
+            window.requestAnimationFrame(animateOnBoard);
+        }
+        window.requestAnimationFrame(animateOnBoard);
+    </script>
+    <div class="ach">
+        <h1>Achievments</h1>
+        <div class="achCard">
+            <div class="card">
+                <div class="ico">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="blue" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="blue" />
+                    </svg>
+                </div>
+                <div class="content">
+                    <h3>Achieved 3<sup>rd</sup> rank in Collage in Competitve coding</h3>
+                    <p>I participated in Competitive coding compitition CODE KAZE oragnized by coding ninjas.</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="ico">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="blue" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="blue" />
+                    </svg>
+                </div>
+                <div class="content">
+                    <h3>Reached 20,000+ visitors on my site</h3>
+                    <p>
+                        My persnol blog site storyduniya.com (<i>Currently unactive</i>) Has reached 20,000+ visitors using SEO without paying a single ruppee.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="ico">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="blue" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="blue" />
+                    </svg>
+                </div>
+                <div class="content">
+                    <h3>Gold medal in Basketball tounament</h3>
+                    <p>In school time I have participated in inter-school basketball tounaments "Harmony".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="dash"></div>
+        <h2>My works</h3>
+        <h3>Links to My Works in Every Field</h3>
+        <div class="allCards">
+            <div class="plate" style="border-bottom: 2px solid rgba(0, 0, 255, 0.767);">
+                <img src="../imgs/imgs/earth.png" alt="">
+                <div class="dis">
+                    <h3>3D Animations</h3>
+                    <p>It's fun to animate and play with 3D objects and Charachters. I like making animations in Blender.</p>
+                </div>
+                <button class="see" style="background:rgb(78, 78, 250);">See</button>
+            </div>
+            <div class="plate" style="border-bottom: 2px solid rgba(255, 0, 21, 0.767);">
+                <img src="../imgs/imgs/hammer.webp" alt="">
+                <div class="dis">
+                    <h3>Hardware Project</h3>
+                    <p>Making a working project is my first hobby and first priority for me. I Like making something which can solve problems and contribute in our society</p>
+                </div>
+                <button class="see" style="background:rgba(255, 0, 21, 0.767);">See</button>
+            </div>
+            <div class="plate" style="border-bottom: 2px solid rgba(0, 255, 13, 0.767);">
+                <img src="../imgs/imgs/coder.webp" alt="">
+                <div class="dis">
+                    <h3>Programming & Coding</h3>
+                    <p>This is my passion and something for which I am very excited to do.</p>
+                </div>
+                <button class="see" style="background:rgba(0, 255, 13, 0.767);">See</button>
+            </div>
+        </div>
+    </div>
+    <div class="tools">
+        <div class="dash"></div>
+        <h2>Skills & Tools</h2>
+        <div class="skillCard">
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Graphic Designing</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Vedio Editing</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Digital Marketing</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Software Development</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Full Stack debelopment</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Canva</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>Inkscape</h3>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <svg height="50" width="50">
+                        <circle cx="25" cy="25" r="15" stroke="yellow" stroke-width="4px" fill="transparent" />
+                        <circle cx="25" cy="25" r="5" fill="yellow" />
+                    </svg>
+                </div>
+                <h3>PixalLab</h3>
+            </div>
+        </div>
+    </div>
+    <div class="xp">
+        <div class="dash"></div>
+        <h2>Work Experience</h2>
+        <div class="xpCard">
+            <div class="comp">
+                <img src="../imgs/imgs/storyduniya(logo).png" alt="" class="logo" width="100px">
+                <div class="tails">
+                    <div class="post">Founder & CEO</div>
+                    <div class="site">www.storyduniya.com</div>
+                    <div class="place">Jipur-302015</div>
+                </div>
+                <div class="date">
+                    <div class="duration">2017-2021</div>
+                    <div class="time">Full-Time</div>
+                </div>
+            </div>
+            <div class="comp">
+                <img src="../imgs/imgs/mksLOGO.webp" alt="" class="logo" width="100px">
+                <div class="tails">
+                    <div class="post">Maker</div>
+                    <div class="site">JU Makerspace</div>
+                    <div class="place">JECRC University</div>
+                </div>
+                <div class="date">
+                    <div class="duration">2021-Current</div>
+                    <div class="time">Full-Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="person">
+            <svg
+                width="100"
+                height="100"
+                viewBox="0 0 52.916664 52.916668"
+                version="1.1"
+                id="svg5"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg">
+                <defs
+                    id="defs2" />
+                <g
+                    id="layer1">
+                    <path
+                    style="fill:#ffff00;stroke:#ffff00"
+                    id="path661"
+                    d="m 32.415623,7.1115884 a 5.7045727,5.4782014 0 0 1 -5.73585,5.3840566 5.7045727,5.4782014 0 0 1 -5.672355,-5.4457397 5.7045727,5.4782014 0 0 1 5.604934,-5.5097422 5.7045727,5.4782014 0 0 1 5.801715,5.318577" />
+                    <rect
+                    style="fill:#ffff00;stroke:#ffff00;stroke-width:0.264583"
+                    id="rect687"
+                    width="14.578353"
+                    height="17.657011"
+                    x="19.739634"
+                    y="13.672865"
+                    ry="0.46772248" />
+                    <rect
+                    style="fill:#ffff00;stroke:#ffff00;stroke-width:0.264583"
+                    id="rect827"
+                    width="3.4408536"
+                    height="11.590243"
+                    x="3.0863516"
+                    y="14.203451"
+                    ry="0.46772248"
+                    transform="rotate(-42.794911)" />
+                    <rect
+                    style="fill:#ffff00;stroke:#ffff00;stroke-width:0.264583"
+                    id="rect827-4"
+                    width="3.4408536"
+                    height="11.590243"
+                    x="32.414364"
+                    y="-23.32922"
+                    ry="0.46772248"
+                    transform="rotate(43.68329)" />
+                    <path
+                    style="fill:#ffff00;stroke:#ffff00"
+                    id="path1059"
+                    d="M 14.981112,7.5722906 A 1.4429425,1.2845353 0 0 1 13.530258,8.8347507 1.4429425,1.2845353 0 0 1 12.095465,7.557827 1.4429425,1.2845353 0 0 1 13.513205,6.265896 1.4429425,1.2845353 0 0 1 14.980719,7.5130024" />
+                    <path
+                    style="fill:#ffff00;stroke:#ffff00"
+                    id="path1059-2"
+                    d="m 41.89555,7.0622217 a 1.4429425,1.2845353 0 0 1 -1.450854,1.2624601 1.4429425,1.2845353 0 0 1 -1.434793,-1.2769237 1.4429425,1.2845353 0 0 1 1.417739,-1.291931 1.4429425,1.2845353 0 0 1 1.467514,1.2471064" />
+                    <rect
+                    style="fill:#ffff00;stroke:#ffff00;stroke-width:0.264583"
+                    id="rect1349"
+                    width="6.7458844"
+                    height="15.891312"
+                    x="19.739634"
+                    y="29.745275"
+                    ry="0.46772248" />
+                    <rect
+                    style="fill:#ffff00;stroke:#ffff00;stroke-width:0.264583"
+                    id="rect1349-4"
+                    width="6.7458844"
+                    height="15.891312"
+                    x="27.549465"
+                    y="29.632088"
+                    ry="0.46772248" />
+                </g>
+            </svg>
+
+        </div>
+        <div class="mail">
+            tilak.21bcan058@jecrcu.edu.in
+        </div>
+        <div class="media">
+            <img src="../imgs/imgs/insta.png" width="30px" alt="">
+            <img src="../imgs/imgs/linkedin.png" width="30px" alt="">
+        </div>
+    </footer>
+</body>
+</html>
